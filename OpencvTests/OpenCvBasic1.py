@@ -29,7 +29,7 @@ while True:
     isTrue, frame = LVideo.read()
     cv.imshow('Video', frame)
     #Als 20 seconden voorbij zijn of d word in gedrukt break de loop
-    if cv.waitKey(1) & 0xFF==ord('d'):
+    if cv.waitKey(20) & 0xFF==ord('d'):
         break
 LVideo.release()
 cv.destroyAllWindows()
