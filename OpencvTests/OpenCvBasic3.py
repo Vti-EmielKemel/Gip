@@ -1,12 +1,12 @@
 import cv2 as cv
 import numpy as np
 
-#een image word gegenereerd dat 500x500 3 kleur kanalen(rgb) is(blanko)
+#een image word gegenereerd dat 500x500 3 kleur kanalen(BGR) is(blanko)
 blank = np.zeros((500,500,3), dtype='uint8')
-#zet alle pixels een bepaalde rgb value
+#zet alle pixels een bepaalde BGR value
  #blank[:] = 0,125,75
 
-#zet bepaalde pixels in een rgb value YxZ
+#zet bepaalde pixels in een BGR value YxZ
 #blank[0:500,166:333]= 0,255,255
 #blank[0:500,333:500]= 0,0,255
 

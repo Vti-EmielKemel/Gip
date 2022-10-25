@@ -1,6 +1,3 @@
-from configparser import Interpolation
-from tkinter import Frame
-from turtle import width
 import cv2 as cv
 img = cv.imread('Resources/Photos/cat.jpg')
 capture = cv.VideoCapture('Resources/Videos/dog.mp4')
