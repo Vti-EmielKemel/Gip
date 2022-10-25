@@ -13,14 +13,24 @@ import cv2 as cv
 #video binnenlezen
 
 #leest de pixels binnend van de video (var capture)
-capture = cv.VideoCapture('Resources/Videos/dog.mp4')
-while True:
+#capture = cv.VideoCapture('Resources/Videos/dog.mp4')
+#while True:
     #leest de frames binnen van de video en een bool dat zegt of de frame succesvol binnengelezen is
-    isTrue, frame = capture.read()
+ #   isTrue, frame = capture.read()
+    #cv.imshow('Video', frame)
+    #Als 20 seconden voorbij zijn of d word in gedrukt break de loop
+  #  if cv.waitKey(20) & 0xFF==ord('d'):
+   #     break
+
+#neemt live video weer voor te vertonen
+LVideo = cv.VideoCapture(0)
+while True:
+    #leest de frames binnen van de live en een bool dat zegt of de frame succesvol binnengelezen is
+    isTrue, frame = LVideo.read()
     cv.imshow('Video', frame)
     #Als 20 seconden voorbij zijn of d word in gedrukt break de loop
-    if cv.waitKey(20) & 0xFF==ord('d'):
+    if cv.waitKey(1) & 0xFF==ord('d'):
         break
-capture.release()
+LVideo.release()
 cv.destroyAllWindows()
 #geeft error als te lang wacht door geen frames meer
