@@ -1,10 +1,8 @@
-
 from cv2 import COLOR_BGR2GRAY
-import numpy as np
-
 import numpy as np
 import cv2 as cv
 cap = cv.VideoCapture(0)
+
 while True:
     isTrue, frame = cap.read()
     grijs = cv.cvtColor(frame,COLOR_BGR2GRAY)
@@ -19,5 +17,6 @@ while True:
     cv.imshow('Video', frame)
     if cv.waitKey(1) & 0xFF==ord('d'):
         break
+    
 cap.release()
 cv.destroyAllWindows()
